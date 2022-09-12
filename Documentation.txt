@@ -1,0 +1,9 @@
+
+Idea: 
+Funny version of Magic 8 
+
+Features:
+Users enter in a question such as: Who is more likely to do ...?
+8 Ball gets a random student or teacher from our class to answer the question.
+It saves the question and the answer on the screen until refreshed.
+
