@@ -1,15 +1,44 @@
-#presumptuous {
-    text-align: center;
+body {
+    border: solid black;
+    background-image: linear-gradient(to bottom right, rgb(127, 250, 127),rgb(99, 189, 220), rgb(91, 91, 255), rgb(177, 0, 177), rgb(243, 0, 243));
+
 }
 
 h3 {
+    margin-left: 32px;
+    font-size: 23px;
+}
+
+#presumptuous {
+    text-align: center;
+    font-size: 65px;
+}
+
+h2, h4, h5 {
     text-align: center;
 }
 
 #question {
+    background-color: white;
     margin: auto;
     display: block;
+    height: 22px;
+    width: 180px;
 }
+
+#answerSection {
+    border: solid black 2px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+
 
 
 
@@ -23,14 +52,15 @@ h3 {
     width: 300px;
     margin: 0;
     background: radial-gradient(circle at 100px 100px, #5cabff, #000);
-  }
+    margin-left: 50px;
+}
 .stage {
-    width: 300px;
-    height: 300px;
-    display: inline-block;
+    width: 310px;
+    height: 310px;
     margin: 20px;
     perspective: 1200px;
     perspective-origin: 50% 50%;
+    margin-left: 596px;
   }
   .ball .shadow {
     position: absolute;

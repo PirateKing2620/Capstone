@@ -6,11 +6,12 @@ app.use(cors());
 app.use(express.json());
 
 
-const { presumptuousDefinition, getRandomName, userQuestion } = require('./controller')
+const { presumptuousDefinition, getRandomName, createUserQuestion, deleteQuestion } = require('./controller')
 
 app.get("/api/definition", presumptuousDefinition)
 app.get("/api/randomName", getRandomName)
-app.post("/api/askedQuestion", userQuestion)
+app.post("/api/askedQuestion", createUserQuestion)
+app.delete("/api/askedQuestion", deleteQuestion)
 
 
 

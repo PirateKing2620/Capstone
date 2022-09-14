@@ -1,15 +1,27 @@
-let userQuestion = document.querySelector('#question')
-
-
+let form = document.querySelector('form')
+let answerSection = document.querySelector('#answerSection')
 
 const askedQuestion = (e) => {
     e.preventDefault()
+    let userQuestion = document.querySelector('#question')
     let body = {
-        inputQuestion : userQuestion.value
+        userQuestion : userQuestion.value
     }
     axios.post("http://localhost:4000/api/askedQuestion", body)
     .then((res) => {
         console.log(res.data)
+        let createdUserQuestion = document.createElement('div')
+        createdUserQuestion.innerHTML = `<h3>${"Question: " + res.data}</h3>`
+        answerSection.appendChild(createdUserQuestion)
+
+            axios.get("http://localhost:4000/api/randomName")
+            .then(res => {
+                const aRandomName = res.data
+                console.log(aRandomName)
+                let userAnswer = document.createElement('div')
+                userAnswer.innerHTML = `<h3>${aRandomName}</h3>`
+                answerSection.appendChild(userAnswer)
+            })
     })
     .catch((err) => {
         console.log(err)
@@ -17,22 +29,7 @@ const askedQuestion = (e) => {
     userQuestion.value = ""
 }
 
-userQuestion.addEventListener('submit', askedQuestion)
-
-
-
-const getRandomName = () => {
-    axios.get("http://localhost:4000/api/randomName")
-    .then(res => {
-        const randomName = res.data
-        
-    })
-}
-
-
-
-
-
+form.addEventListener('submit', askedQuestion)
 
 
 
