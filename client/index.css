@@ -45,6 +45,7 @@ h4 {
 
 /* 8-ball */
 .circle {
+    display: flex;
     display: block;
     background: black;
     border-radius: 50%;
@@ -61,15 +62,15 @@ h4 {
     perspective: 1200px;
     perspective-origin: 50% 50%;
     margin-left: 596px;
-  }
-  .ball .shadow {
+}
+.ball .shadow {
     position: absolute;
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
     transform: rotateX(90deg) translateZ(-150px);
     z-index: -1;
-  }
+}
 .ball {
     display: inline-block;
     width: 100%;
@@ -78,8 +79,8 @@ h4 {
     border-radius: 50%;
     position: relative;
     background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #000000 100%);
-  }
-  .ball:before {
+}
+.ball:before {
     content: "";
     position: absolute;
     background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
@@ -91,8 +92,8 @@ h4 {
     width: 90%;
     filter: blur(5px);
     z-index: 2;
-  }
-  .ball:after {
+}
+.ball:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -103,9 +104,9 @@ h4 {
     background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
     transform: translateX(-80px) translateY(-90px) skewX(-20deg);
     filter: blur(10px);
-  }
-
+}
 .ball .eight {
+    display: flex;
     width: 110px;
     height: 110px;
     margin: 30%;
@@ -113,8 +114,8 @@ h4 {
     border-radius: 50%;
     transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
     position: absolute;
-  }
-  .ball .eight:before {
+}
+.ball .eight:before {
     content: "8";
     display: block;
     position: absolute;
@@ -129,4 +130,4 @@ h4 {
     font-family: Arial;
     font-size: 90px;
     line-height: 104px;
-  }
+}
